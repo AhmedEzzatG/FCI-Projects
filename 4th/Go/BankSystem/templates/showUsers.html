@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Users</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="/static/showStyle.css"/>
+	</head>
+	<body>
+        <div class="body">
+            <h1>Users</h1>
+            <table border="1">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                {{ range $val := . }}
+                <tr>
+                    <td>{{$val.Id}}</td>
+                    <td>{{$val.Name}}</td>
+                    <td>{{$val.Age}}</td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+    </body>
+</html>

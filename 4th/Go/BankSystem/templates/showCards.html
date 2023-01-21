@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cards</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="/static/showStyle.css"/>
+	</head>
+	<body>
+        <div class="body">
+            <h1>Cards</h1>
+            <table border="1">
+                <tr>
+                    <th>#</th>
+                    <th>Bank Name</th>
+                    <th>User Id</th>
+                </tr>
+                {{ range $val := . }}
+                <tr>
+                    <td>{{$val.Id}}</td>
+                    <td>{{$val.BankName}}</td>
+                    <td>{{$val.ClientId}}</td>
+                </tr>
+                {{ end }}
+            </table>
+        </div>
+    </body>
+</html>

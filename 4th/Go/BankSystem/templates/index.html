@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>DDB GUI</title>
+		<meta charset="utf-8"/>
+		<link rel="stylesheet" type="text/css" href="/static/style.css"/>
+	</head>
+	<body>
+        <!-- Start Header -->
+        <div class="header">
+            <h1>Bank</h1>
+        </div>
+        <!-- End Header -->
+
+        <!-- Start Slideshow container -->
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="/imges/1*JQCm1gy11U2ighWkCOCu9w.jpeg" style="width:100%; height:600px">
+            </div>
+        
+            <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="/imges/chatbot-bank.jpg" style="width:100%; height:600px">
+            </div>
+        
+            <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="/imges/toronto-bay-street-bank-sign.jpg" style="width:100%; height:600px">
+            </div>
+        
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+        
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+        <!-- End Slideshow container -->
+
+        <!-- Start Forms -->
+        <div class="forms">
+            <!-- User -->
+            <div class="user">
+                <h1>User</h1>
+                <form action="/user" method="POST">
+                    <label>Id:</label>
+                    <br>
+                    <input type="number" id="id" name="id" required>
+                    <br>
+                    <label>Name:</label>
+                    <br>
+                    <input type="text" id="name" name="name" required>
+                    <br>
+                    <label>Age:</label>
+                    <br>
+                    <input type="number" id="age" name="age" required>
+                    <input type="submit" class="User-Add-button" value="Add/Edit">
+                </form>
+            </div>
+            <!-- Card -->
+            <div class="Card">
+                <h1>Card</h1>
+                <form action="/card" method="POST">
+                    <label>Id:</label>
+                    <br>
+                    <input type="number" id="id" name="id" required>
+                    <br>
+                    <label>Bank Name:</label>
+                    <br>
+                    <input type="text" id="bank-name" name="bank-name" required>
+                    <br>
+                    <label>User Id:</label>
+                    <br>
+                    <input type="number" id="Client-id" name="Client-id" required>
+
+                    <input type="submit" class="Card-Add-button" value="Add/Edit">
+                </form>
+            </div>
+            <!-- Delete -->
+            <div class="Delete">
+                <h1>Delete</h1>
+                <form action="/delete" method="POST">
+                    <label for="ids">Id Type:</label>
+                    <br>
+                    <select name="ids" id="ids" class = "select-box" required>
+                        <option value="User ID">User ID</option>
+                        <option value="Card ID">Card ID</option>
+                    </select>
+                    <br>
+                    <label>Id:</label>
+                    <br>
+                    <input type="number" id="id" name="id" required>
+
+                    <input type="submit" class="Delete-button" value="Delete">
+                </form>
+            </div>  
+
+            <div class="Show">
+                <h1>Show Users</h1>
+                <form action="/users" method="GET">
+                     <input type="submit" class="show-button" value="Show all users">
+                    </form>
+            </div>
+
+            <div class="show-cards">
+                <h1>Show Cards for user</h1>
+                <form action="/user-cards" method="GET">
+                    <label>Id:</label>
+                    <br>
+                    <input type="number" id="id" name="id" required>
+                    <input type="submit" class="show-cards-button" value="Show all cards">
+                    </form>
+            </div>
+            
+        </div>
+        <!-- End Forms -->
+        <!-- Start Footer -->
+        <div class="footer"></div>
+        <!-- End Footer -->
+        <script src="/static/Script.js"></script>
+    </body>
+</html>

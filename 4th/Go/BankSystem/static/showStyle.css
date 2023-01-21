@@ -1,0 +1,30 @@
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.body {
+    box-shadow: #333 1px 1px 5px;
+    width: 300px;
+    text-align: center;
+    margin: 10% 0% 25% 40%;
+    padding: 1%;
+}
+.body h1 {
+    text-align: center;
+    width: auto;
+}
+
+.body table {
+    margin: 10% 0% 0% 20%;
+}
+
+.body table tr td, th {
+    padding: 10px;
+}
